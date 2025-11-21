@@ -1,5 +1,6 @@
 <?php 
     var_dump($_POST);
+    var_dump($_FILES);
 ?>
 <!DOCTYPE html>
 <html lang="lv">
@@ -9,7 +10,7 @@
     <title>Ziņot par miskasti</title>
 </head>
 <body>
-    <form action="/submit-report.php" method="POST">
+    <form action="/submit-report.php" method="POST" enctype="multipart/form-data">
         <label for="title">Virsraksts</label>
         <input type="text" id="title" name="title" required>
         <label for="location">Atrašanās vieta</label>
