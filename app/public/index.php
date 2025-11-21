@@ -12,6 +12,13 @@
     <meta charset="UTF-8">
     <title>Mans mežš miskastē – Docker test</title>
 </head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/submit-report.php">Ziņot par piesārņojumu</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
     <h1>Mans mežš miskastē</h1>
     <p>Hello from Docker. If you see this, your PHP + Apache container is working.</p>
