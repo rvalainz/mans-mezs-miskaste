@@ -1,0 +1,38 @@
+services:
+  app:
+    build: .
+    container_name: mans-mezs-app
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html/public
+
+  db:
+    image: mariadb:11
+    container_name: mans-mezs-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mans_mezs
+      MYSQL_USER: mans_user
+      MYSQL_PASSWORD: mans_pass
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: mans-mezs-phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_USER: mans_user
+      PMA_PASSWORD: mans_pass
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+
+volumes:
+  db_data:

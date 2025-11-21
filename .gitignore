@@ -1,0 +1,16 @@
+# OS editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# PHP composer (future)
+vendor/
+
+# Local uploads
+app/storage
+app/public/uploads
+
+# Env/config files (future)
+.env
+.env.local
