@@ -9,6 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziņot par miskasti</title>
 </head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Sākums</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
     <form action="/submit-report.php" method="POST" enctype="multipart/form-data">
         <label for="title">Virsraksts</label>
